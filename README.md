@@ -13,7 +13,7 @@ It requires PythonSCAD v.1.2.0 or later.
 
 ## Thingiverse
 
-<https://thingiverse.com/thing:>
+<https://thingiverse.com/thing:6528263>
 
 ## GitHub
 
