@@ -1,18 +1,20 @@
+# Prusa Core One+ spool holder gasket
 
-#### Customizing
+The [original spool holder](https://www.printables.com/model/1167816-core-onegen-2-printable-parts/) (see file "spoolholder-static-r1.stl") requires a rubber gasket.
 
-This design was done in OpenSCAD and can be customized.
+This is a printable version of it.
 
-Clone the repository with `git clone --recursive` using the Github URL mentioned below.
-Be sure to use a [recent version of OpenSCAD](https://openscad.org/downloads.html#snapshots).
+## Customizing
 
-#### Printables
+This design was done in PythonSCAD and can be customized.
 
+Clone the repository with `git clone` using the Github URL mentioned below.
+It requires PythonSCAD v.1.2.0 or later.
 
-#### Thingiverse
+## Thingiverse
 
 <https://thingiverse.com/thing:>
 
-#### GitHub
+## GitHub
 
-<https://github.com/nomike/>
+<https://github.com/nomike/prusa-coreoneplus-spoolholder-gasket/>
