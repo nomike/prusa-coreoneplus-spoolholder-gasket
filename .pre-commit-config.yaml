@@ -1,0 +1,36 @@
+default_language_version:
+  node: "24.9.0"
+
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v6.0.0
+      hooks:
+          # Regression goldens under tests/regression/ are byte-faithful
+          # captures of generator output (POV, STL, OBJ, ...) and may
+          # legitimately contain trailing whitespace or no final
+          # newline; e.g. the POV exporter emits "polygon { 5, " with a
+          # trailing space, and binary STL has no terminating newline.
+          # The whitespace and EOF fixers must not touch those files,
+          # otherwise they desynchronize from the freshly-generated
+          # output the tests compare against.
+          # tests/data/ holds input fixtures that are intentionally
+          # malformed or whitespace-sensitive (e.g. json/leading-data.json,
+          # json/trailing-whitespace.json). Their exact bytes are part of
+          # the test, so no formatter may touch them.
+          - id: trailing-whitespace
+          - id: end-of-file-fixer
+          - id: check-yaml
+          - id: check-json
+          - id: detect-private-key
+    - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+      rev: v9.27.0
+      hooks:
+          - id: commitlint
+            stages: [commit-msg]
+            additional_dependencies: ["@commitlint/config-conventional@21.2.4"]
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+      rev: v0.17.5
+      hooks:
+          - id: ruff
+            name: ruff (python stubs)
+            args: ["--select", "F401,F811,F821"]
