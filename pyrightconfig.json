@@ -1,0 +1,6 @@
+{
+  "extraPaths": [
+    "/usr/share/pythonscad/libraries/python",
+    "/usr/share/pythonscad/libraries/python/stubs"
+  ]
+}
