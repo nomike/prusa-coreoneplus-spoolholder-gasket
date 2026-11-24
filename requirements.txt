@@ -1,0 +1,2 @@
+pythonscad>=1.2.0
+pythonscad-stl-generator

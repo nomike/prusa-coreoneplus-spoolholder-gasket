@@ -9,7 +9,7 @@ $(OUTPUT_DIR):
 	mkdir -p $@
 
 generate_stls:
-	openscad_stl_file_generator/generate_stls --output-dir="$(OUTPUT_DIR)"
+	generate-pythonscad-stls --output-dir="$(OUTPUT_DIR)"
 
 clean:
 	rm -rf $(OUTPUT_DIR)
