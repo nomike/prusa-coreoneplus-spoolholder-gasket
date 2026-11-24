@@ -48,7 +48,7 @@ PowerShell:
 
 ## Thingiverse
 
-<https://thingiverse.com/thing:6528263>
+<https://thingiverse.com/thing:7439608>
 
 ## GitHub
 
